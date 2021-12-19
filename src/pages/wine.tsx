@@ -4,7 +4,7 @@ const WinePage: NextPage = () => {
     return (
         <div>
             <h1>
-                Wine
+                this is Wine page
             </h1>
         </div>
     )
