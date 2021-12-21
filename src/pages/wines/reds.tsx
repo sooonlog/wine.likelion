@@ -1,12 +1,13 @@
 import type { NextPage } from "next";
+import { Error, Loading } from "../../components";
 import { useWineData } from "../../hooks/useWineData";
 import { Wine } from "../../types/Wine"
 
 const RedWinePage: NextPage = () => {
     const { data, error } = useWineData('whites');
 
-    if(error) return <div>Failed to Loading...</div>
-    if(!data) return <div>...Loading</div>
+    if(error) return <Error />
+    if(!data) return <Loading />
 
     return (
         <div>
