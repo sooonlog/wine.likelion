@@ -14,7 +14,7 @@ const RedWinePage: NextPage = () => {
         <div>
             <h1>Red Wine</h1>
             <main>
-                {data.map((wineData: Wine)=>{
+                {data.map((wineData: Wine) => {
                     return (
                         <WineCard
                             key={`reds-wine-list-${wineData.id}`}
