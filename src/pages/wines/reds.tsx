@@ -1,26 +1,25 @@
 import type { NextPage } from "next";
-import { Error, Loading } from "../../components";
+import { Error, Loading, WineCard } from "../../components";
 import { useWineData } from "../../hooks/useWineData";
 import { Wine } from "../../types/Wine"
 
 const RedWinePage: NextPage = () => {
-    const { data, error } = useWineData('whites');
+    const name = 'reds';
+    const { data, error } = useWineData(name);
 
     if(error) return <Error />
     if(!data) return <Loading />
 
     return (
         <div>
-        <h1>Wine</h1>
+        <h1>Red Wine</h1>
         <main>
             {data.map((wineData: Wine)=>{
-                const { id, wine, winery } = wineData;
-
                 return (
-                    <div key={`port-wine-list-${id}`}>
-                    <h1>{wine}</h1>
-                    <p>{winery}</p>
-                    </div>
+                    <WineCard
+                        key={`port-wine-list-${wineData.id}`}
+                        wineData={wineData} 
+                    />
                 )
             })}
         </main>
