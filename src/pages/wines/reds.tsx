@@ -12,17 +12,17 @@ const RedWinePage: NextPage = () => {
 
     return (
         <div>
-        <h1>Red Wine</h1>
-        <main>
-            {data.map((wineData: Wine)=>{
-                return (
-                    <WineCard
-                        key={`port-wine-list-${wineData.id}`}
-                        wineData={wineData} 
-                    />
-                )
-            })}
-        </main>
+            <h1>Red Wine</h1>
+            <main>
+                {data.map((wineData: Wine)=>{
+                    return (
+                        <WineCard
+                            key={`reds-wine-list-${wineData.id}`}
+                            wineData={wineData} 
+                        />
+                    )
+                })}
+            </main>
         </div>
     );
 };

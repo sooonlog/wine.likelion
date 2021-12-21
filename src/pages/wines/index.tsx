@@ -4,7 +4,7 @@ const WinesPage: NextPage = () => {
     return (
         <div>
             <h1>
-                WinesPage
+                Wines Page
             </h1>
             <strong>reds</strong><br />
             <strong>whites</strong><br />
