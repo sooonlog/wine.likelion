@@ -6,7 +6,7 @@ const RedWinePage: NextPage = () => {
 
     return (
         <div>
-           <WineContainer name={name}/>
+            <WineContainer name={name}/>
         </div>
     );
 };
